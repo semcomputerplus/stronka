@@ -1,1 +1,24 @@
+.panels {
+    display: flex;
+}
+/**/
 
+
+
+
+/**/
+.panel1 {
+    background: oldlace;
+}
+.panel2 {
+    background: hotpink;
+}
+.panel3 {
+    background: goldenrod;
+}
+.panel4 {
+    background: navy;
+}
+.panel5 {
+    background: orange;
+}
