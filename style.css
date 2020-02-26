@@ -66,6 +66,24 @@ h1 {
     outline-color: grey;
 }
 
+.heroImage {
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.heroImage h1 {
+    position: absolute;
+    right: 5%;
+    top: 15%;
+    color: white;
+    text-shadow: 0px 0px 4px black;
+}
+
+.heroImage img {
+    width: 100%;
+    height: auto;
+}
 
 
 @media screen and (max-width:767px) {
@@ -81,6 +99,18 @@ h1 {
     }
 
     .siteName {
+        text-align: center;
+    }
+
+    .heroImage {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .heroImage h1 {
+        position: static;
+        color: black;
+        text-shadow: none;
         text-align: center;
     }
 }
