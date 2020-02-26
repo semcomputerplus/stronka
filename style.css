@@ -25,7 +25,7 @@ h1 {
 
 .topInner {
     max-width: 1200px;
-    height: 160px;
+    height: 60px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -33,3 +33,40 @@ h1 {
     color: white;
 }
 
+.topContact a {
+  display: flex;
+  align-items: center;
+}
+
+.topContact a:hover,
+.topContact a:focus {
+    color: yellow;
+    outline-color: yellow;
+}
+
+.topLogin a:hover,
+.topLogin a:focus {
+    outline: 2px solid yellow;
+}
+
+.siteName {
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+@media screen and (max-width:767px) {
+    *:focus {
+        outline-color: transparent;
+    }
+
+    .topInner {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .siteName {
+        text-align: center;
+    }
+}
