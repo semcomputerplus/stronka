@@ -92,9 +92,9 @@ h1 {
 }
 
 .mainCat {
+    margin-top: 40px;
     flex-basis: 48%;
     position: relative;
-    margin-top: 40px;
 }
 
 .mainCat h2 {
@@ -140,4 +140,12 @@ h1 {
         text-shadow: none;
         text-align: center;
     }
+
+    .mainCats {
+        flex-direction: column;
+    }
+    
+    .mainCat {
+        flex-basis: unset;
+    }    
 }
