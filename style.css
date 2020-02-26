@@ -68,7 +68,6 @@ h1 {
 
 .heroImage {
     position: relative;
-    max-width: 1200px;
     margin: auto;
 }
 
@@ -81,6 +80,34 @@ h1 {
 }
 
 .heroImage img {
+    width: 100%;
+    height: auto;
+}
+
+.mainCats {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mainCat {
+    flex-basis: 48%;
+    position: relative;
+    margin-top: 40px;
+}
+
+.mainCat h2 {
+    position: absolute;
+    margin: 0;
+    top: 50%;
+    width: 100%;
+    height: 50%;
+    padding: 3%;
+    background: rgba(255,255,255,0.7);
+}
+
+.mainCat img {
     width: 100%;
     height: auto;
 }
