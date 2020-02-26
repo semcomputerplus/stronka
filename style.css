@@ -54,6 +54,20 @@ h1 {
     margin: 30px auto;
 }
 
+.siteName img {
+    transition: opacity 500ms;
+}
+
+.siteName img:hover {
+    opacity: 0.5;
+}
+
+.siteName a:focus {
+    outline-color: grey;
+}
+
+
+
 @media screen and (max-width:767px) {
     *:focus {
         outline-color: transparent;
