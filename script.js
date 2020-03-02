@@ -1,3 +1,7 @@
 $(document).ready(function(){
-	$(".mainMenu").append("<button class=\"hamburger\">menu</button>");
+	$(".mainMenu").prepend("<button class=\"hamburger\">menu</button>");
+	$(".mainMenu ul").addClass("closedMenu");
+	$(".hamburger").on("click",function(){
+		$(".mainMenu ul").slideToggle("closedMenu");
+	});
 });

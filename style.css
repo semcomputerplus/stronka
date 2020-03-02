@@ -176,6 +176,10 @@ transform:scale(1.1) rotateY(-1turn);
         text-align: center;
     }
 
+    .closedMenu{
+        display: none;
+    }
+
     .heroImage {
         display: flex;
         flex-direction: column-reverse;
@@ -195,4 +199,10 @@ transform:scale(1.1) rotateY(-1turn);
     .mainCat {
         flex-basis: unset;
     }    
+}
+
+@media screen and (min-width:768px) {
+    .mainMenu button {
+        display:none;
+        }
 }
