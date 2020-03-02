@@ -11,21 +11,21 @@ body {
     color: black;
 }
 
-*{
+* {
     box-sizing: border-box;
     color: inherit;
-} 
-
-h1{
-    font-size: 2rem,;
 }
 
-.top{
+h1 {
+    font-size: 2rem;
+}
+
+.top {
     background-color: black;
 }
 
 .topInner {
-    max-width: 960px;
+    max-width: 1200px;
     height: 60px;
     margin: auto;
     display: flex;
@@ -39,7 +39,7 @@ h1{
   align-items: center;
 }
 
-.topContact a:hover, 
+.topContact a:hover,
 .topContact a:focus {
     color: yellow;
     outline-color: yellow;
@@ -51,8 +51,12 @@ h1{
 }
 
 .siteName {
-    max-width: 960px;
-    margin: 20px auto;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+
+.siteName img {
+    transition: opacity 500ms;
 }
 
 .siteName img:hover {
@@ -82,31 +86,82 @@ h1{
 }
 
 .mainCats {
-    max-width: 960px;
+    max-width: 1200px;
     margin: auto;
     display: flex;
     justify-content: space-between;
 }
 
 .mainCat {
-    flex-basis: 48%;
-    position: relative;
     margin-top: 40px;
+    flex-basis: 48%;
+    overflow: hidden;
+    position: relative;
 }
 
 .mainCat h2 {
     position: absolute;
     margin: 0;
-    top: 50%;
+    top: 100%;
     width: 100%;
-    height: 50%;
-    padding: 5%;
+    height: 100%;
+    padding: 3%;
     background: rgba(255,255,255,0.7);
+    transition: top ease-in 1s;
 }
+
+.mainCat a:hover h2,
+.mainCat a:focus h2 {
+    top: 50%;
+    outline-color: transparent;
+}
+
 .mainCat img {
     width: 100%;
     height: auto;
 }
+
+.bestSellers {
+    max-width: 1200px;
+     margin: auto;
+     display: flex;
+     justify-content: space-between;   
+}
+
+.bestSeller {
+    text-align: center;
+}
+
+.bestSeller img {
+    width: 100%;
+    height: auto;
+    transition: transform 1s;
+}
+
+.bestSeller:nth-child(odd) a:hover img,
+.bestSeller:nth-child(odd) a:focus img {
+transform: scale(1.2) rotate(-5deg);
+}
+
+.bestSeller:nth-child(even) a:hover img,
+.bestSeller:nth-child(even) a:focus img {
+transform: scale(1.2) rotate(5deg);
+}
+
+.bestSeller button {
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+
+.bestSeller button:hover,
+.bestSeller button:focus {
+background-color: black;
+color: white;
+border-color: black;
+}
+
+
 
 @media screen and (max-width:767px) {
     *:focus {
@@ -119,23 +174,17 @@ h1{
         justify-content: center;
         flex-direction: column;
     }
-    
     .siteName {
         text-align: center;
     }
 
-    .siteName img {
-        display: block;
-        margin: auto;
+    .closedMenu {
+        display: none;
     }
 
     .hero {
         display: flex;
         flex-direction: column-reverse;
-    }
-
-    .closedMenu {
-        display: none;
     }
     
     .hero h1 {
