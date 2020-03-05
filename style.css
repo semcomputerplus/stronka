@@ -13,7 +13,7 @@ body {
 
 *{ /*p, span, h1, h2*/
     box-sizing: border-box;
-    color:inherit;/*wszystkie elementy mają być dziedziczone od rodzica*/
+    color: inherit;/*wszystkie elementy mają być dziedziczone od rodzica*/
 }
 
 h1 {
@@ -52,11 +52,15 @@ outline-color: yellow;
 
 .siteName {
     max-width: 960px;
-    margin: 20px auto;
+    margin: 30px auto;
 }
 
-.siteName img:hover{
-    opacity:0.5;
+.siteName img {
+    transition: opacity 500ms;
+}
+
+.siteName img:hover {
+    opacity: 0.5;
 }
 
 .siteName a:focus {
@@ -98,41 +102,95 @@ justify-content: space-between;
 .mainCat h2 {
     position: absolute;
     margin: 0;
-    top: 50%;
+    top: 100%;
     width: 100%;
-    height: 50%;
+    height: 100%;
     padding: 3%;
     background: rgba(255,255,255,0.7);
+    transition: top ease-in 1s;
+}
+
+.mainCat a:hover h2,
+.mainCat a:focus h2 {
+    top: 50%;
+    outline-color: transparent;
 }
 
 .mainCat img {
-width: 100%;
-height: auto;
+    width: 100%;
+    height: auto;
 }
 
-@media screen and (max-width:767px){
-    *:focus{/*wyłączenie focusa*/
+.bestSellers {
+    max-width: 1200px;
+     margin: auto;
+     display: flex;
+     justify-content: space-between;   
+}
+
+.bestSeller {
+    text-align: center;
+}
+
+.bestSeller img {
+    width: 100%;
+    height: auto;
+    transition: transform 1s;
+}
+
+.bestSeller:nth-child(odd) a:hover img,
+.bestSeller:nth-child(odd) a:focus img {
+transform: scale(1.2) rotate(-5deg);
+}
+
+.bestSeller:nth-child(even) a:hover img,
+.bestSeller:nth-child(even) a:focus img {
+transform: scale(1.2) rotate(5deg);
+}
+
+.bestSeller button {
+    background-color: white;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+
+.bestSeller button:hover,
+.bestSeller button:focus {
+background-color: black;
+color: white;
+border-color: black;
+}
+
+
+
+@media screen and (max-width:767px) {
+    *:focus {
         outline-color: transparent;
     }
+
     .topInner {
         height: auto;
-        display: flex;/*jest rodzicem dla innych topów(topContact,topLogin,topInfo)*/
+        display: flex;
         justify-content: center;
         flex-direction: column;
     }
+
     .siteName {
         text-align: center;
     }
 
-    .heroImage {
-        display: flex;/*Modelujemy wewnętrzne elementy, te elemety, które są wewnątrz tego elementu*/
-        flex-direction: column-reverse;
+    .closedMenu {
+        display: none;
+    }
 
+    .heroImage {
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     .heroImage h1 {
-        position: static; /*pozycjonowanie elementu top, right, left, bottom*/
-        color:black;
+        position: static;
+        color: black;
         text-shadow: none;
         text-align: center;
     }
@@ -145,6 +203,4 @@ height: auto;
             flex-basis: 100%;
         }
 }
-
-
 
